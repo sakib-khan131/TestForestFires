@@ -1,0 +1,41 @@
+ 
+<html lang="en">
+
+<body>
+    <h1>FWI Prediction</h1>
+    
+    <!-- Main input form for ML model -->
+    <form action="{{ url_for('predict') }}" method="POST">
+        <label>Temperature:</label>
+        <input type="text" name="Temperature" placeholder="Temperature" required><br><br>
+
+        <label>RH:</label>
+        <input type="text" name="RH" placeholder="RH" required><br><br>
+
+        <label>Ws:</label>
+        <input type="text" name="Ws" placeholder="Ws" required><br><br>
+
+        <label>Rain:</label>
+        <input type="text" name="Rain" placeholder="Rain" required><br><br>
+
+        <label>FFMC:</label>
+        <input type="text" name="FFMC" placeholder="FFMC" required><br><br>
+
+        <label>DMC:</label>
+        <input type="text" name="DMC" placeholder="DMC" required><br><br>
+
+        <label>ISI:</label>
+        <input type="text" name="ISI" placeholder="ISI" required><br><br>
+
+        <label>Classes:</label>
+        <input type="text" name="Classes" placeholder="Classes" required><br><br>
+
+        <label>Region:</label>
+        <input type="text" name="Region" placeholder="Region" required><br><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <h2>THE FWI prediction is {{result}}</h2>
+</body>
+</html>
